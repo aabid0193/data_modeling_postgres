@@ -3,20 +3,20 @@
 
 __Sparkify__, a startup music streaming company, wanted to analyze their data they've collected on song and user activity on their music streaming application. The analytics team would like to find out what songs are users listening to most, but currently there is no way for the analytics team to query their data. Their data currently resides in a directory of json logs on user activity on the app, and json metadata on their songs. This pipeline and data model were created to make analyzing the data easier for the analytics team.
 
-### Schema       
+### Schema:       
 The Fact and dimension tables are defined with a star schema optimized for queries on song play analysis.
 
-### Fact Table      
+#### Fact Table:      
 __songplays__ - records in log data associated with song plays i.e. records with page ___NextSong___       
-__values contained__: _songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent_       
+    -_songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent_       
 
-__Dimension Tables__     
+### Dimension Tables:     
 __users__ - users in the app    
     - _user_id, first_name, last_name, gender, level_    
 __songs__ - songs in music database     
     - _song_id, title, artist_id, year, duration_     
 __artists__ - artists in music database     
-    - _artist_id, name, location, lattitude, longitude_
+    - _artist_id, name, location, lattitude, longitude_       
 __time__ - timestamps of records in songplays broken down into specific units     
     - _start_time, hour, day, week, month, year, weekday_   
 
