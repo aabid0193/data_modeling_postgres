@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS songplays (songplay_id SERIAL PRIMARY KEY, start_time
 
 user_table_create = ("""
 CREATE TABLE IF NOT EXISTS users (user_id int PRIMARY KEY, first_name varchar NOT NULL, \
-                                  last_name varchar NOT NULL, gender varchar, level varchar)
+                                  last_name varchar NOT NULL, gender varchar, level varchar NOT NULL)
 """)
 
 song_table_create = ("""
